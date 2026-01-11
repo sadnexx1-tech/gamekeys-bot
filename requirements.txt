@@ -3,3 +3,4 @@ aiosqlite
 yookassa
 python-dotenv
 aiofiles
+requests
