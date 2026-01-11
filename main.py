@@ -38,8 +38,8 @@ async def init_db():
                 photo_path TEXT, stock INTEGER DEFAULT 0, key TEXT
             )
         ''')
-        await db.execute("INSERT OR IGNORE INTO games (name, description, price, photo_path, stock, key) VALUES (?, ?, ?, ?, ?, ?)",
-                         ("GTA V", "Открытый мир, экшн. Steam ключ.", 500, "images/gta.jpg", 10, "GTA5-ABC123-DEF"))
+        await db.execute("INSERT OR IGNORE INTO games (id, name, description, price, photo_path, stock, key) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                 (1, "GTA V", "Открытый мир, экшн. Steam ключ.", 500, "images/gta.jpg", 10, "GTA5-ABC123-DEF"))
         await db.commit()
 
 @dp.message(CommandStart())
@@ -120,4 +120,5 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
