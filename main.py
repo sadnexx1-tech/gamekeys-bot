@@ -16,8 +16,8 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 YOOKASSA_SHOP_ID = os.getenv("YOOKASSA_SHOP_ID")
 YOOKASSA_SECRET = os.getenv("YOOKASSA_SECRET")
 ADMIN_ID = int(os.getenv("ADMIN_ID", 0))
-TELEGRAM_CHANNEL_ID = int(os.getenv("TELEGRAM_CHANNEL_ID", 0))
-CHANNEL_USERNAME = "frexgames_channel"
+TELEGRAM_CHANNEL_ID = int(os.getenv("-1001331881336", 0))
+CHANNEL_USERNAME = "frexgamesl"
 Configuration.account_id = YOOKASSA_SHOP_ID
 Configuration.secret_key = YOOKASSA_SECRET
 logging.basicConfig(level=logging.INFO)
@@ -409,3 +409,4 @@ await init_db()
 await dp.start_polling(bot)
 if name == "main":
 asyncio.run(main())
+
